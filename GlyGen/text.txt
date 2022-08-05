@@ -1,1 +1,1 @@
-Deposit Markdown content in this folder!
+This is the place where you can deposit Markdown content and/or a list of controlled vocabulary IDs!
