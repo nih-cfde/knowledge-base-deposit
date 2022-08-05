@@ -1,4 +1,6 @@
-## Contributing to the Knowledge Base
+# Contributing to the Knowledge Base
+
+This is the repository for adding Knowledge Base content to the NIH CFDE Portal. To add your data:
 
 1. Clone this repository.
 2. Add Markdown content to the folder named after Common Fund group.
@@ -6,7 +8,7 @@
 
 The content registry team will review your data and handle the workflow to add content to the portal website.
 
-## Have questions?
+# Have questions?
 
 Ask in the #content-generation-sprint slack channel or create an issue.
 
