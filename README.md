@@ -1,6 +1,20 @@
-# Scripts and workflows to build and update the CFDE portal content registry
+## Contributing to the Knowledge Base
 
-## Dependencies
+1. Clone this repository.
+2. Add Markdown content to the folder named after Common Fund group.
+3. Create a Pull Request to this repository.
+
+The content registry team will review your data and handle the workflow to add content to the portal website.
+
+## Have questions?
+
+Ask in the #content-generation-sprint slack channel or create an issue.
+
+**The information below is from the [update-content-registry](https://github.com/nih-cfde/update-content-registry) repository, which is used by the content generation team to add content to the portal. It is here for reference.**
+
+### Scripts and workflows to build and update the CFDE portal content registry
+
+### Dependencies
 
 You'll need a modern Python (3.8+) together with snakemake and
 cfde-deriva. If you conda/mamba, you can do that with the below:
@@ -30,7 +44,7 @@ and change into the repo directory:
 cd update-content-registry/
 ```
 
-## Quickstart - building
+### Quickstart - building
 
 Then, build!
 
@@ -39,14 +53,14 @@ make clean
 make
 ```
 
-## Who can contribute?
+### Who can contribute?
 
 Anyone who wants to! Please create pull requests from branches within
 this repository; you'll need to ask
 [the helpdesk](mailto:support@cfde.atlassian.net) to be added to the
 [content-registry-contrib team](https://github.com/orgs/nih-cfde/teams/content-registry-contrib).
 
-## How to add custom content to the registry
+### How to add custom content to the registry
 
 The basic idea of the content registry is that for supported
 types of controlled vocabulary (CV), each identifier can optionally have
@@ -58,7 +72,7 @@ The currently supported CV types are currently `gene`, `anatomy`,
 `compound`, and `disease`, although it is straightforward to add
 support for other controlled vocabularies used in the C2M2.
 
-### Getting started!
+#### Getting started!
 
 Below is a simple approach to generating your own content that will
 let us integrate it other content in the content registry.
@@ -68,7 +82,7 @@ let us integrate it other content in the content registry.
 The CFDE-CC is happy to help with any of the steps below! Just ask in an
 issue!
 
-### FIRST: write a script that builds custom Markdown for one or more CV terms.
+#### FIRST: write a script that builds custom Markdown for one or more CV terms.
 
 The first step is to write some code that builds the requisite Markdown.
 The script [scripts/build-appyter-gene-links.py](https://github.com/nih-cfde/update-content-registry/blob/main/scripts/build-appyter-gene-links.py) creates a custom linkout that looks like this:
@@ -93,13 +107,13 @@ script is in the right format, you can have the script itself do
 things like connect to a database, load information from other files,
 etc.
 
-### SECOND: set up a pull request with your new script against the main branch.
+#### SECOND: set up a pull request with your new script against the main branch.
 
 Now add your script to the branch, commit and push to the github
 repository.  (You may need to ask for permissions as above.) And then
 ask Rayna Harris, Jessica Lumian, and Titus Brown for next steps on slack!
 
-### ADVANCED: add your script to the workflow
+#### ADVANCED: add your script to the workflow
 
 Alternatively, you can forge ahead and try to add your script yourself!
 
@@ -137,7 +151,7 @@ Once you get to this point, we can do a trial upload of your Markdown
 content to the content registry and show you some screenshots, and/or
 schedule a Zoom call to talk about next steps.
 
-## Supported Markdown syntax
+### Supported Markdown syntax
 
 Content is deposited into the content registry as Markdown, and rendered
 using markdown-it with some specialized extensions, some of which are
@@ -148,12 +162,12 @@ is the most complete documentation available for the full set of Markdown
 syntax supported by the CFDE portal.  We highlight a few of the specifics
 below.
 
-### Tables
+#### Tables
 
 Tables are used by the alias table example [in the gallery](https://github.com/nih-cfde/update-content-registry/blob/main/docs/gallery.md).
 See the [full supported syntax for tables here](https://github.com/informatics-isi-edu/ermrestjs/blob/master/docs/user-docs/markdown-formatting.md#15-table).
 
-### Iframes
+#### Iframes
 
 Several of the examples [in the gallery](https://github.com/nih-cfde/update-content-registry/blob/main/docs/gallery.md) use
 [iframe HTML elements](https://en.wikipedia.org/wiki/HTML_element#Frames)
@@ -161,4 +175,3 @@ to encapsulate calls out to other Web pages.
 
 This uses the `::: iframe` syntax. You can see the full syntax guide
 [here](https://github.com/informatics-isi-edu/ermrestjs/blob/master/docs/user-docs/markdown-formatting.md#6-iframe).
-# knowledge-base-deposit
